@@ -8,7 +8,7 @@ E-mail: <input type="text" name="E-mail"><br>
 Gebruikersnaam: <input type="text" name="Gebruikersnaam"><br>
 Wachtwoord: <input type="text" name="Wachtwoord"><br>
 Herhaal wachtwoord: <input type="text" name="Wachtwoord"><br>
-<a href="">Create</a>
+<input value="Create" type="submit">
 <br>
 <input value="Login" type="submit">
 </form>
