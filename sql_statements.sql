@@ -5,8 +5,9 @@ CREATE DATABASE Project1
 CREATE TABLE Account ( 
 	ID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	Email VARCHAR(255) UNIQUE,
-    Password VARCHAR(255) 
+        Password VARCHAR(255) 
 );
+
 
 -- Tabel genaamd Persoon met voornaam Tussenvoegsel achternaam en Gebruikersnaam.
 CREATE TABLE Persoon (
