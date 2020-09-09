@@ -5,6 +5,7 @@ CREATE TABLE Account (
 	Email VARCHAR(255) UNIQUE,
         Password VARCHAR(255) 
 );
+
 CREATE TABLE Persoon (
     Id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Voornaam VARCHAR(255),
