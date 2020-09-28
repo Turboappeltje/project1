@@ -9,6 +9,7 @@ Password VARCHAR(255)
 );
 
 -- Tabel genaamd Persoon met voornaam Tussenvoegsel achternaam en Gebruikersnaam.
+-- Primary key op de dezelfde regel werkt ook
 CREATE TABLE Persoon (
 Id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 Voornaam VARCHAR(255),
@@ -18,7 +19,6 @@ Gebruikersnaam VARCHAR(255) UNIQUE,
 Account_id INT,
 FOREIGN KEY (Account_id) REFERENCES Account(id)
 );
--- Primary key op de dezelfde regel werkt ook
 
 -- Voegt een admin gebruiker toe aan je account - en persoon tabel
 CREATE USER 'Jari'@'localhost' IDENTIFIED BY '12345';
