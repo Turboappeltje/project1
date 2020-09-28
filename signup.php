@@ -1,16 +1,24 @@
+<?php
+
+include "database.php";
+
+$db = new database("localhost", "Jari", "12345", "project1", "utf8");
+$db->executeQueryExample();
+
+?>
+
 <html>
 	<body>
-		<form action="welcome.php" method="post">
-			Voornaam: <input type="text" name="Voornaam" required><br>
-			Tussenvoegsel: <input type="text" name="Tussenvoegsel"><br>
-			Achternaam: <input type="text" name="Achternaam" required><br>
-			E-mail: <input type="email" name="email" placeholder="E-mail" required/><br>
-			Gebruikersnaam: <input type="text" name="username" placeholder="Gebruikersnaam" required/><br>
-			Wachtwoord: <input type="wachtwoord" name="pswrd" placeholder="Wachtwoord" required/><br>
-			Herhaal wachtwoord: <input type="wachtwoord" name="pswrd" placeholder="Wachtwoord" required/><br>
-			<input value="Maak" type="submit">
-			<br>
-			<input value="Login" type="submit">
+		<form action="signup.php" method="post">
+			<input type="text" name="Voornaam" placeholder="Voornaam" required><br>
+			<input type="text" name="Tussenvoegsel" placeholder="Tussenvoegsel"><br>
+			<input type="text" name="Achternaam" placeholder="Achternaam" required><br>
+			<input type="email" name="email" placeholder="E-mail" required/><br>
+			<input type="text" name="username" placeholder="Gebruikersnaam" required/><br>
+			<input type="wachtwoord" name="pswrd" placeholder="Wachtwoord" required/><br>
+			<input type="wachtwoord" name="pswrd" placeholder="Herhaal wachtwoord" required/><br>
+			<input type="submit" value="Sign up!">
+			<a href="index.php">Ik heb al een account. login!</a>
 		</form>
 	</body>
 </html>

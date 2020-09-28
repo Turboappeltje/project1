@@ -1,23 +1,32 @@
 <?php
-
+//Database class aan met private properties
 class database{
 
-	private $host = "127.0.0.1";
-	private $database_name = "project1";
-	private $user = "Jari";
-	private $password = "12345";
-	private $charset = "utf8mb4";
-	private $DB;
+	private $host;
+	private $username;
+	private $database; 
+	private $password;
+	private $charset;
+	private $db;
 
-		function __construct(){
-			try {
-            $this->DB = new PDO('mysql:host='.$this->host.';dbname='.$this->database_name.';charset='.$this->charset, $this->user, $this->password);
-        } catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
-        }
+	//Database connectie en initialiseert de class variables. 
+	function __construct($host, $username, $database, $password, $charset){
+		$this->host = $host;
+		$this->username = $username;
+		$this->database = $database;
+		$this->password = $password;
+		$this->charset = $charset;
+		
+		try{
+			$dsn = "mysql:host=$this->host;dbname=$this->database;charset=$this->charset";
+			$this->db = new PDO($dsn, $this->username, $this->password);
+			echo("Database connection successfully established");
 
-			
-		};
-
-
+		}catch(PDOException $e){
+			echo $e->getMessage();
+			exit("An error occurred");
+		}
+	}
 }
+
+
