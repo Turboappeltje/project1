@@ -1,12 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>login pagina</title>
+	</head>
 	<body>
-		<form action="welcome.php" method="post">
-			Gebruikersnaam: <input type="text" name="gebruikersnaam" placeholder="Gebruikersnaam" required><br>
-			Wachtwoord: <input type="Wachtwoord" name="wachtwoord" placeholder="Wachtwoord" required><br>
-			<a href="signup.php">Maak account</a>
-			<a href="lostpsw.php">Vergeten wachtwoord</a>
-			<br>
-			<input value="Login" type="submit">
+		<form id='login' action='login.php' method='post' accept-charset='UTF-8'>
+			<fieldset >
+				<legend>Login</legend>
+				<input type="text" name="uname" placeholder="Username" required/>
+				<input type="password" name="pword" placeholder="Password" required/>
+				<input type='submit' name='Submit' value='Submit' />
+			</fieldset>
+		  	<p>
+		  		Not a member? <a href="register.php">Sign Up</a>
+		  	</p>
+		  	<p>
+		  		Reset Password? <a href="reset.php">Reset</a>
+		  	</p>
 		</form>
 	</body>
 </html>
