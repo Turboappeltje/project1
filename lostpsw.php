@@ -1,4 +1,3 @@
-<!-- Furkan ucar OITAOO8B -->
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
